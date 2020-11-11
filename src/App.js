@@ -22,7 +22,7 @@ class App extends Component {
 
   getDetails(e) {
     e.preventDefault();
-    axios.post(`/sun/set?zip=${this.state.zipcode}`).then((res) => {
+    axios.get(`/sun/set?zip=${this.state.zipcode}`).then((res) => {
       this.setState(res.data);
     });
   }
